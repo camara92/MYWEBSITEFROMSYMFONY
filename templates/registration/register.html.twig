@@ -5,37 +5,30 @@
 
 {% block body %}
 
-	<h1 class="container text-center" >Inscription</h1>
+	<h1  class="container xxx-large text-center bg-dark text-white p-4 shadow bold my-5">Inscription</h1>
+
 	<div class="container bg-info my-5 text-white my-2">
-	   {{ form_start(registrationForm) }} 
-	        <div class="w-100">{{ form_row(registrationForm.email) }}</div>
-	        {{ form_row(registrationForm.plainPassword, {
-	            label: 'Password'
-	        }) }}
-	        {{ form_row(registrationForm.agreeTerms) }}
 	
-	        <button type="submit" class="btn">S'inscrire</button>
-	    {{ form_end(registrationForm) }}
+			{{ form_start(registrationForm, {"attr": {"class": "container"}}) }}
+			{{ form_row(registrationForm.email , {"attr": {"class": "container"}}) }}
+			{{ form_row(registrationForm.plainPassword, {"attr": {"class": "container"}}) }}
+		
 	
-	</div>
+			<button type="submit" class="btn btn-success container my-2 p-2">S'inscrire</button>
+			{{ form_end(registrationForm) }}
+	
+		</div>
+	
+
+
 {% endblock %}
 
-{# 
-{% block title %}Register{% endblock %}
-
-{% block body %}
-    <h1 class="container text-center" >Inscription</h1>
-<div class="container bg-info my-5 text-white my-2">
-   {{ form_start(registrationForm) }} 
-        <div class="w-100">{{ form_row(registrationForm.email) }}</div>
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
-
-        <button type="submit" class="btn">S'inscrire</button>
-    {{ form_end(registrationForm) }}
-
-</div>
-{% endblock %}
- #}
+{# 	{{ form_start(registrationForm, {"attr": {"class": "container"}}) }}
+			{{ form_row(registrationForm.email , {"attr": {"class": "container"}}) }}
+			{{ form_row(registrationForm.plainPassword, {
+		            label: 'Password'
+		        }) }}
+			{{ form_row(registrationForm.agreeTerms) }}
+	
+			<button type="submit" class="btn">S'inscrire</button>
+			{{ form_end(registrationForm) }} #}
