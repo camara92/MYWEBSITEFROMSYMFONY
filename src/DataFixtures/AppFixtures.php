@@ -13,21 +13,33 @@ class AppFixtures extends Fixture
     {
         // $product = new Product();
         // $manager->persist($product);
-        for ($i = 0; $i < 7; $i++) {
+         for ($i = 0; $i < 5; $i++) {
             $projet = new Projects();
-            $projet->setProjectname("Ma boutique ecommerce ");
-            $projet->setContent("Un projet réalisé sous le framework Angular. Le but est de mettre mes compétences dans la pratique.");
+            // $projet->setProjectname("Ma boutique ecommerce ");
+            // $projet->setContent("Un projet réalisé sous le framework Angular. Le but est de mettre mes compétences dans la pratique.");
+            // $projet->setImage("https://picsum.photos/200/300");
+            // $projet->setCategorie("travail personnel");
+            // $projet->setDatedebut(new DateTime());
+            // $projet->setDatefin(new DateTime());
+            // $projet->setAuthor("Daouda CAMARA"); 
+            // $projet->setTechno("Framework Angular"); 
+            // $projet->setLienGit("https://github.com/camara92/Maboutique-GP-Angular-Ecommerce-");
+            // partie Symfony project en dur 
+
+            
+            $projet->setProjectname("YesCode ");
+            $projet->setContent("Un projet réalisé sous le framework Symfony. Le but est de mettre mes compétences dans la pratique.");
             $projet->setImage("https://picsum.photos/200/300");
-            $projet->setCategorie("travail personnel");
-            $projet->setDatedebut(new DateTime(rand()));
-            $projet->setDatefin(new DateTime(rand()));
-            $projet->setAuthor("Daouda CAMARA"); 
-            $projet->setTechno("Framework Angular"); 
-            $projet->setLienGit("");
+            $projet->setCategorie("travail pratique");
+            $projet->setDatedebut(new DateTime());
+            $projet->setDatefin(new DateTime());
+            $projet->setAuthor("Formation"); 
+            $projet->setTechno("Framework Symfony"); 
+            $projet->setLienGit("https://github.com/camara92/YesCode/");
 
 
             $manager->persist($projet);
-        }
+       }
 
         $manager->flush();
 

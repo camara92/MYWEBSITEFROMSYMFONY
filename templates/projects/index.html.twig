@@ -1,20 +1,33 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Hello ProjectsController!{% endblock %}
-
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<div class="animate__animated animate__bounce text-center bg-info text-white p-2 my-5"> Daouda CAMARA </div>
+	<div class="jumbotron text-center my-5 shadow">
+		<h1 class="display-4">Bienvenue sur
+			<span class="text-success">Atlas   !</span>
+		</h1>
+		<p class="lead">Ici ça parle de code, langages et technos de demain
+		</p>
+		<hr class="my-4">
+		<p>Retrouvez nos derniers articles sur les technos les plus hype du moment !</p>
+		<p class="lead">
+			<a class="btn btn-primary btn-lg shadow" href="#" role="button">
+				&lt;/&gt; Actualités &lt;/&gt;
+			</a>
+		</p>
+	</div>
+	
+	
+	
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/daoud/portefolio/src/Controller/ProjectsController.php'|file_link(0) }}">src/Controller/ProjectsController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/daoud/portefolio/templates/projects/index.html.twig'|file_link(0) }}">templates/projects/index.html.twig</a></code></li>
-    </ul>
-</div>
+<div class=" row flex-lg-row flex-xl-row flex-column ">
+
+		{% for data in projects %}
+
+			{% include "projects/card.project.html.twig"  %}
+
+		{% endfor %}
+
+	</div> 
+
 {% endblock %}
