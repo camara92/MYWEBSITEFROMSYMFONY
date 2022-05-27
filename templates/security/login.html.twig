@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}CAMARA - Connexion {% endblock %}
 
 {% block body %}
 <form method="post" class="container bg-info my-5 text-white ">
@@ -14,11 +14,11 @@
         </div>
     {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Se connecter </h1>
-    <label for="inputEmail">Votre adresse email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    <label for="inputPassword">Votre mot de passe </label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+    <h1 class="h3 mb-3 font-weight-normal text-center p-2 bold">Se connecter </h1>
+    <label class="text-center bold" for="inputEmail" >Votre adresse email</label>
+    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Saisir votre email : daouda@gmail.com" class="form-control" autocomplete="email" required autofocus>
+    <label class="text-center bold" for="inputPassword">Votre mot de passe </label>
+    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Saisir votre mot de passe : 1@motdepasse" autocomplete="current-password" required>
 
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}"
